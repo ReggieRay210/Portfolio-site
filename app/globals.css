@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.snap-y::-webkit-scrollbar {
+  display: none;
+}
+
+/* HeroSection customization */
+#title{
+  width:25em;
+}
+#titleName::before {
+  content: 'Web Designer';
+  padding-right: 4px;
+  color: #ff4303;
+  font-weight: bolder;
+  animation: title-change 10s infinite;
+}
+
+@keyframes title-change{
+  0%,
+  25% {
+    content: 'Front-end Developer';
+  }
+  26%,
+  50% {
+    content: 'IT Support Technician';
+  }
+  51%,
+  75% {
+    content: 'CyberSecurity Analyst';
+  }
+}
+
+/* button animation */
+#contactBtn::before {
+  content: '';
+  background: linear-gradient(to bottom, #51a2ed , #FF4303);
+  position: absolute;
+  width: 120%;
+  height: 90%;
+  left: -10px;
+  z-index: -1;
+  animation: rotate 9s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#contactBtn::after{
+  content: '';
+  inset: 2.5px;
+  position: absolute;
+  background: #785aa2;
+  border-radius: 15px;
+  z-index: -1;
+}
+/* =============================== */
+
+/* projects section */
+#scroll-left{
+  direction: ltr;
+}
+.snap-x::-webkit-scrollbar {
+  display: none;
+}
+/* =============================== */
