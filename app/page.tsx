@@ -9,7 +9,7 @@ const sectionSnapStart = 'snap-y snap-mandatory overflow-y-scroll h-screen';
 const sectionSnapTo = 'snap-always snap-center duration-[2s]  ease-in';
 // page information
 const pages = ['About', 'Skills', 'Projects', 'Contact'];
-const sectionTitle = 'text-sky-400 text-3xl font-bold mb-4';
+const sectionTitle = 'text-sky-400 text-3xl font-bold my-4 ';
 const heroText = 'text-left text-md';
 
 // skills table customization
@@ -33,7 +33,7 @@ export default function Home() {
 
     const onWheel = (mouse:WheelEvent)=>{
       mouse.preventDefault();
-      mouse.scrollLeft = mouse.scrollLeft + mouse.deltaY;
+      // mouse.scrollLeft = mouse.scrollLeft + mouse.deltaY;
     };
     projectsContainer.addEventListener('wheel', onWheel, {passive:false});
 
@@ -135,7 +135,7 @@ export default function Home() {
       <div id="about" className={`${section} ${sectionSnapTo}`}>
         {/* about section */}
         <h5 className={`${sectionTitle}`}>{pages[0]}</h5>
-        <p className="font-light text-sm text-pretty lg:text-lg">
+        <p className="mx-10 font-light text-sm text-pretty lg:text-lg">
           My name is Reginald Griffin II. I am an IT professional based in San
           Antonio with experience supporting enterprise users, systems, and
           security focused environments. I began my IT career in 2021 as a Help
@@ -167,20 +167,26 @@ export default function Home() {
       <div className={`${section} ${sectionSnapTo}`}>
         {/* skills section */}
         <h5 id="skills" className={`${sectionTitle}`}>
-          {pages[1]}
-        </h5>
-        <p className="italic">
-          <q>
-            A jack of all trades is a master of none, but oftentimes better than
-            a master of one.
-          </q>
-        </p>
-        <table className="border-separate w-[80%] mx-auto">
+          {pages[1]} & Experience
+        </h5> 
+        <div className='border mx-10 ' >
+          <p className="italic">
+            <q>
+              A jack of all trades is a master of none, but oftentimes better than
+              a master of one.
+            </q><br /><br />
+          </p>
+          <p>I have provided services in multiple areas within the IT sector from Hardware and Software
+            to Networking and Security.<br /> <br />Here are some of the tools and resources that I have used over time.
+          </p>
+        </div>
+        
+        <table className="mt-4 border-separate w-[90%] mx-auto">
           <tbody>
             <tr className={`${tableText}`}>
               <td className={`${tableImages}`}>
                 <img
-                  width="50"
+                  width="60"
                   height="50"
                   src="https://img.icons8.com/ios/50/figma--v1.png"
                   alt="figma--v1"
@@ -189,7 +195,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="50"
+                  width="60"
                   height="50"
                   src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
                   alt="visual-studio-code-2019--v2"
@@ -198,7 +204,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="50"
+                  width="60"
                   height="50"
                   src="https://img.icons8.com/ios/50/git.png"
                   alt="git"
@@ -207,7 +213,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="50"
+                  width="60"
                   height="50"
                   src="https://img.icons8.com/ios/50/html-5--v1.png"
                   alt="html-5--v1"
@@ -216,7 +222,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="60"
+                  width="70"
                   height="60"
                   src="https://img.icons8.com/ios/60/css3.png"
                   alt="css3"
@@ -225,7 +231,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="60"
+                  width="70"
                   height="60"
                   src="https://img.icons8.com/ios/60/bootstrap.png"
                   alt="bootstrap"
@@ -236,7 +242,7 @@ export default function Home() {
             <tr className={`${tableText}`}>
               <td className={`${tableImages}`}>
                 <img
-                  width="50"
+                  width="60"
                   height="50"
                   src="https://img.icons8.com/material-rounded/50/tailwind_css.png"
                   alt="tailwind_css"
@@ -245,7 +251,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="60"
+                  width="70"
                   height="60"
                   src="https://img.icons8.com/ios/60/react-native--v1.png"
                   alt="react-native--v1"
@@ -254,7 +260,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="60"
+                  width="70"
                   height="60"
                   src="https://img.icons8.com/ios/60/typescript.png"
                   alt="typescript"
@@ -263,7 +269,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="60"
+                  width="70"
                   height="60"
                   src="https://img.icons8.com/ios/50/python--v1.png"
                   alt="python--v1"
@@ -272,7 +278,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="60"
+                  width="70"
                   height="60"
                   src="https://img.icons8.com/ios/50/powershell.png"
                   alt="powershell"
@@ -281,7 +287,7 @@ export default function Home() {
               </td>
               <td className={`${tableImages}`}>
                 <img
-                  width="50"
+                  width="60"
                   height="50"
                   src="https://img.icons8.com/ios/50/linux.png"
                   alt="linux"
@@ -305,50 +311,50 @@ export default function Home() {
 
         {/* Horizontal scroll container */}
         <div ref={projectsRefContainer} className={`${slideSnapStart}`}>
-        <div className={`${slideSnapTo}`}>
-          <p>
-            A variety of unique projects have been built to meet each client's
-            business needs. Here are some of the few.
-          </p>
-        </div>
-        <div className={`${slideSnapTo}`}>
-          <div>
-            <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
-            <h5 className="text-[2rem] md:text-[3rem]">
-              WPP Remodel & construction
-            </h5>
-            <h5>
-              <span className="text-[#FF4303]">Built with</span>: NextJS, React,
-              Tailwind
-            </h5>
+          <div className={`${slideSnapTo}`}>
+            <p className='mx-auto text-2xl font-bold'>
+              A variety of unique projects have been built to meet each client's
+              business needs. Here are a few:
+            </p>
           </div>
-          <Image
-            className="w-[40%]"
-            src="/WPP.png"
-            width={450}
-            height={0}
-            alt="WPP site"
-            unoptimized
-          />
-        </div>
-        <div className={`${slideSnapTo}`}>
-          <div>
-            <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
-            <h5 className="text-[2rem]">Radiant Designs Hair Salon</h5>
-            <h5>
-              <span className="text-[#FF4303]">Built with</span>: Bootstrap 5
-            </h5>
+          <div className={`${slideSnapTo}`}>
+            <div>
+              <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
+              <h5 className="text-[2rem] md:text-[3rem]">
+                WPP Remodel & construction
+              </h5>
+              <h5>
+                <span className="text-[#FF4303]">Built with</span>: NextJS, React,
+                Tailwind
+              </h5>
+            </div>
+            <Image
+              className="w-[40%]"
+              src="/WPP.png"
+              width={450}
+              height={0}
+              alt="WPP site"
+              unoptimized
+            />
           </div>
-          <Image
-            className="w-[40%]"
-            src="/RadiantDesigns.png"
-            width={450}
-            height={0}
-            alt="RadiantDesigns site"
-            unoptimized
-          />
+          <div className={`${slideSnapTo}`}>
+            <div>
+              <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
+              <h5 className="text-[2rem]">Radiant Designs Hair Salon</h5>
+              <h5>
+                <span className="text-[#FF4303]">Built with</span>: Bootstrap 5
+              </h5>
+            </div>
+            <Image
+              className="w-[40%]"
+              src="/RadiantDesigns.png"
+              width={450}
+              height={0}
+              alt="RadiantDesigns site"
+              unoptimized
+            />
+          </div>
         </div>
-      </div>
         {/* ================================ */}
       </div>
       {/* ****************************************** */}
