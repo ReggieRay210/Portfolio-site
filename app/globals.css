@@ -90,9 +90,6 @@ body {
 /* =============================== */
 
 /* projects section */
-#scroll-left{
-  direction: ltr;
-}
 .snap-x::-webkit-scrollbar {
   display: none;
 }

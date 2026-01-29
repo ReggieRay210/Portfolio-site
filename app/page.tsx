@@ -20,28 +20,12 @@ const tableText = 'text-center text-black text-xs';
 const slideSnapStart =
   'snap-x flex snap-mandatory h-[90%] w-[100%] mx-auto overflow-scroll';
 const slideSnapTo =
-  'p-4 snap-center flex-shrink-0 h-[100%] w-[100%] flex items-center justify-between text-center';
+  'sm:p-10 snap-center flex-shrink-0 h-[100%] w-[100%] flex items-center justify-between text-center';
 
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const projectsRefContainer = useRef<HTMLDivElement | null>(null);
   
-  useEffect(() => {
-    const projectsContainer = projectsRefContainer.current;
-    if (projectsContainer === null) return;
-
-    const onWheel = (mouse:WheelEvent)=>{
-      mouse.preventDefault();
-      // mouse.scrollLeft = mouse.scrollLeft + mouse.deltaY;
-    };
-    projectsContainer.addEventListener('wheel', onWheel, {passive:false});
-
-    return () =>{
-      projectsContainer.removeEventListener('wheel', onWheel);
-    };
-  },[]);
-
   return (
     <main className={`${sectionSnapStart}`}>
       {/* group1 */}
@@ -169,7 +153,7 @@ export default function Home() {
         <h5 id="skills" className={`${sectionTitle}`}>
           {pages[1]} & Experience
         </h5> 
-        <div className='border mx-10 ' >
+        <div className='mx-10 ' >
           <p className="italic">
             <q>
               A jack of all trades is a master of none, but oftentimes better than
@@ -310,7 +294,7 @@ export default function Home() {
         </h5>
 
         {/* Horizontal scroll container */}
-        <div ref={projectsRefContainer} className={`${slideSnapStart}`}>
+        <div id='horizontalScroll' className={`${slideSnapStart}`}>
           <div className={`${slideSnapTo}`}>
             <p className='mx-auto text-2xl font-bold'>
               A variety of unique projects have been built to meet each client's
@@ -321,10 +305,10 @@ export default function Home() {
             <div>
               <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
               <h5 className="text-[2rem] md:text-[3rem]">
-                WPP Remodel & construction
+                WPP Remodel & Construction
               </h5>
               <h5>
-                <span className="text-[#FF4303]">Built with</span>: NextJS, React,
+                <span className="text-[#FF4303] font-bold">Built with</span>: NextJS, React,
                 Tailwind
               </h5>
             </div>
@@ -342,7 +326,7 @@ export default function Home() {
               <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
               <h5 className="text-[2rem]">Radiant Designs Hair Salon</h5>
               <h5>
-                <span className="text-[#FF4303]">Built with</span>: Bootstrap 5
+                <span className="text-[#FF4303] font-bold">Built with</span>: Bootstrap 5
               </h5>
             </div>
             <Image
