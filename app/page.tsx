@@ -173,113 +173,113 @@ export default function Home() {
           <tbody>
             <tr className={`${tableText}`}>
               <td className={`${tableImages}`}>
-                <img
-                  width="60"
-                  height="50"
-                  src="https://img.icons8.com/ios/50/figma--v1.png"
-                  alt="figma--v1"
-                />
+              <img
+                width={60}
+                height={50}
+                src="https://img.icons8.com/ios/50/figma--v1.png"
+                alt="figma--v1"
+              />
                 Figma
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="60"
-                  height="50"
-                  src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
-                  alt="visual-studio-code-2019--v2"
-                />
+              <img
+                width={60}
+                height={50}
+                src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
+                alt="visual-studio-code-2019--v2"
+              />
                 Visual Studio
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="60"
-                  height="50"
+              <img
+                width={60}
+                  height={50}
                   src="https://img.icons8.com/ios/50/git.png"
                   alt="git"
-                />
+              />
                 Git
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="60"
-                  height="50"
-                  src="https://img.icons8.com/ios/50/html-5--v1.png"
-                  alt="html-5--v1"
-                />
+              <img
+                width={60}
+                height={50}
+                src="https://img.icons8.com/ios/50/html-5--v1.png"
+                alt="html-5--v1"
+              />
                 HTML5
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="70"
-                  height="60"
-                  src="https://img.icons8.com/ios/60/css3.png"
-                  alt="css3"
-                />
+              <img
+                width={70}
+                height={60}
+                src="https://img.icons8.com/ios/60/css3.png"
+                alt="css3"
+              />
                 CSS3
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="70"
-                  height="60"
-                  src="https://img.icons8.com/ios/60/bootstrap.png"
-                  alt="bootstrap"
-                />
+              <img
+                width={70}
+                height={60}
+                src="https://img.icons8.com/ios/60/bootstrap.png"
+                alt="bootstrap"
+              />
                 Bootstrap5
               </td>
             </tr>
             <tr className={`${tableText}`}>
               <td className={`${tableImages}`}>
-                <img
-                  width="60"
-                  height="50"
-                  src="https://img.icons8.com/material-rounded/50/tailwind_css.png"
-                  alt="tailwind_css"
-                />
+              <img
+                width={60}
+                height={50}
+                src="https://img.icons8.com/material-rounded/50/tailwind_css.png"
+                alt="tailwind_css"
+              />
                 Tailwind CSS
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="70"
-                  height="60"
-                  src="https://img.icons8.com/ios/60/react-native--v1.png"
-                  alt="react-native--v1"
-                />
+              <img
+                width={70}
+                height={60}
+                src="https://img.icons8.com/ios/60/react-native--v1.png"
+                alt="react-native--v1"
+              />
                 React
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="70"
-                  height="60"
-                  src="https://img.icons8.com/ios/60/typescript.png"
-                  alt="typescript"
-                />
+              <img
+                width={70}
+                height={60}
+                src="https://img.icons8.com/ios/60/typescript.png"
+                alt="typescript"
+              />
                 TypeScript
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="70"
-                  height="60"
-                  src="https://img.icons8.com/ios/50/python--v1.png"
-                  alt="python--v1"
-                />
+              <img
+                width={70}
+                height={60}
+                src="https://img.icons8.com/ios/50/python--v1.png"
+                alt="python--v1"
+              />
                 Python
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="70"
-                  height="60"
-                  src="https://img.icons8.com/ios/50/powershell.png"
-                  alt="powershell"
-                />
+              <img
+                width={70}
+                height={60}
+                src="https://img.icons8.com/ios/50/powershell.png"
+                alt="powershell"
+              />
                 Powershell
               </td>
               <td className={`${tableImages}`}>
-                <img
-                  width="60"
-                  height="50"
-                  src="https://img.icons8.com/ios/50/linux.png"
-                  alt="linux"
-                />
+              <img
+                width={60}
+                height={50}
+                src="https://img.icons8.com/ios/50/linux.png"
+                alt="linux"
+              />
                 Linux
               </td>
             </tr>
