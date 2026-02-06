@@ -39,6 +39,9 @@ export default function RootLayout({ children }: {
 }) {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" type="image/x-icon" href="public/favicon-32x32.png" />
+            </head>
             <body className={
                 `scroll-smooth text-white text-center mx-2 ${layoutColor}${inter.className
                 }`
