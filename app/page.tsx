@@ -326,7 +326,7 @@ export default function Home() {
               <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
               <h5 className="text-[2rem]">Radiant Designs Hair Salon</h5>
               <h5>
-                <span className="text-[#FF4303] font-bold">Built with</span>: Bootstrap 5
+                <span className="text-[#FF4303] font-bold">Built with</span>: HTML, Bootstrap 5, JavaScript
               </h5>
             </div>
             <Image
@@ -347,14 +347,15 @@ export default function Home() {
       <div id="contact" className={`${section} ${sectionSnapTo}`}>
         {/* contact section */}
         <h5 className={`${sectionTitle}`}>{pages[3]}</h5>
-        <p>
-          I focus on building dependable solutions and fixing problems fast. You
-          get clean work, clear updates, and strong follow through. View my
-          projects. Reach out to start a conversation.
+        <p className='h-[25%] flex items-center my-10 text-2xl italic '>
+            I focus on building dependable solutions and fixing problems fast. You
+            get clean work, clear updates, and strong follow through. View my
+            projects. Reach out to start a conversation.
         </p>
         <h5 className="mt-3 font-bold text-2xl hover:text-[#FF4303] hover:underline transition">
           r.griffin2680@gmail.com
         </h5>
+        
 
         {/* ================================ */}
       </div>
