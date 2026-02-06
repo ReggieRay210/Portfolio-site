@@ -1,31 +1,30 @@
-'use client';
-import Image from 'next/image';
-import { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
+"use client";
+import Image from "next/image";
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 // site layout customization
-const section = 'h-screen mb-4 overflow-hidden';
-const sectionSnapStart = 'snap-y snap-mandatory overflow-y-scroll h-screen';
-const sectionSnapTo = 'snap-always snap-center duration-[2s]  ease-in';
+const section = "h-screen mb-4 overflow-hidden";
+const sectionSnapStart = "snap-y snap-mandatory overflow-y-scroll h-screen";
+const sectionSnapTo = "snap-always snap-center duration-[2s]  ease-in";
 // page information
-const pages = ['About', 'Skills', 'Projects', 'Contact'];
-const sectionTitle = 'text-sky-400 text-3xl font-bold my-4 ';
-const heroText = 'text-left text-md';
+const pages = ["About", "Skills", "Projects", "Contact"];
+const sectionTitle = "text-sky-400 text-3xl font-bold my-4 ";
+const heroText = "text-left text-md";
 
 // skills table customization
-const tableImages = 'place-items-center';
-const tableText = 'text-center text-black text-xs';
+const tableImages = "place-items-center";
+const tableText = "text-center text-black text-xs";
 
 // project slideshow
 const slideSnapStart =
-  'snap-x flex snap-mandatory h-[90%] w-[100%] mx-auto overflow-scroll';
+  "snap-x flex snap-mandatory h-[90%] w-[100%] mx-auto overflow-scroll";
 const slideSnapTo =
-  'sm:p-10 snap-center flex-shrink-0 h-[100%] w-[100%] flex items-center justify-between text-center';
-
+  "sm:p-10 snap-center flex-shrink-0 h-[100%] w-[100%] flex items-center justify-between text-center";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  
+
   return (
     <main className={`${sectionSnapStart}`}>
       {/* group1 */}
@@ -101,9 +100,9 @@ export default function Home() {
               width={320}
               height={100}
               style={{
-                borderRadius: '0px 0px 120px ',
-                objectFit: 'contain',
-                objectPosition: '10% 10%',
+                borderRadius: "0px 0px 120px ",
+                objectFit: "contain",
+                objectPosition: "10% 10%",
               }}
               alt="headshot image"
               unoptimized
@@ -152,19 +151,24 @@ export default function Home() {
         {/* skills section */}
         <h5 id="skills" className={`${sectionTitle}`}>
           {pages[1]} & Experience
-        </h5> 
-        <div className='mx-10 ' >
+        </h5>
+        <div className="mx-10 ">
           <p className="italic">
             <q>
-              A jack of all trades is a master of none, but oftentimes better than
-              a master of one.
-            </q><br /><br />
+              A jack of all trades is a master of none, but oftentimes better
+              than a master of one.
+            </q>
+            <br />
+            <br />
           </p>
-          <p>I have provided services in multiple areas within the IT sector from Hardware and Software
-            to Networking and Security.<br /> <br />Here are some of the tools and resources that I have used over time.
+          <p>
+            I have provided services in multiple areas within the IT sector from
+            Hardware and Software to Networking and Security.
+            <br /> <br />
+            Here are some of the tools and resources that I have used over time.
           </p>
         </div>
-        
+
         <table className="mt-4 border-separate w-[90%] mx-auto">
           <tbody>
             <tr className={`${tableText}`}>
@@ -294,22 +298,24 @@ export default function Home() {
         </h5>
 
         {/* Horizontal scroll container */}
-        <div id='horizontalScroll' className={`${slideSnapStart}`}>
+        <div id="horizontalScroll" className={`${slideSnapStart}`}>
           <div className={`${slideSnapTo}`}>
-            <p className='mx-auto text-2xl font-bold'>
+            <p className="mx-auto text-2xl font-bold">
               A variety of unique projects have been built to meet each client's
               business needs. Here are a few:
             </p>
           </div>
           <div className={`${slideSnapTo}`}>
             <div>
-              <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
+              <h5 className="text-md font-thin text-gray-200">
+                Portfolio website
+              </h5>
               <h5 className="text-[2rem] md:text-[3rem]">
                 WPP Remodel & Construction
               </h5>
               <h5>
-                <span className="text-[#FF4303] font-bold">Built with</span>: NextJS, React,
-                Tailwind
+                <span className="text-[#FF4303] font-bold">Built with</span>:
+                NextJS, React, Tailwind
               </h5>
             </div>
             <Image
@@ -323,10 +329,13 @@ export default function Home() {
           </div>
           <div className={`${slideSnapTo}`}>
             <div>
-              <h5 className="text-md font-thin text-gray-200">Portfolio website</h5>
+              <h5 className="text-md font-thin text-gray-200">
+                Portfolio website
+              </h5>
               <h5 className="text-[2rem]">Radiant Designs Hair Salon</h5>
               <h5>
-                <span className="text-[#FF4303] font-bold">Built with</span>: HTML, Bootstrap 5, JavaScript
+                <span className="text-[#FF4303] font-bold">Built with</span>:
+                HTML, Bootstrap 5, JavaScript
               </h5>
             </div>
             <Image
@@ -347,15 +356,14 @@ export default function Home() {
       <div id="contact" className={`${section} ${sectionSnapTo}`}>
         {/* contact section */}
         <h5 className={`${sectionTitle}`}>{pages[3]}</h5>
-        <p className='h-[25%] flex items-center my-10 text-2xl italic '>
-            I focus on building dependable solutions and fixing problems fast. You
-            get clean work, clear updates, and strong follow through. View my
-            projects. Reach out to start a conversation.
+        <p className="h-[25%] flex items-center my-10 text-2xl italic ">
+          I focus on building dependable solutions and fixing problems fast. You
+          get clean work, clear updates, and strong follow through. View my
+          projects. Reach out to start a conversation.
         </p>
         <h5 className="mt-3 font-bold text-2xl hover:text-[#FF4303] hover:underline transition">
           r.griffin2680@gmail.com
         </h5>
-        
 
         {/* ================================ */}
       </div>
