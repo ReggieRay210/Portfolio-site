@@ -89,7 +89,7 @@ export default function Home() {
               id="contactBtn"
               className="relative my-2 overflow-hidden rounded-xl text-sky-400 font-bold px-6 "
             >
-              <Link href={`#${pages[3].toLowerCase()}`}>Let's Connect</Link>
+              <Link href={`#${pages[3].toLowerCase()}`}>Let&apos;s Connect</Link>
             </button>
           </div>
 
@@ -301,7 +301,7 @@ export default function Home() {
         <div id="horizontalScroll" className={`${slideSnapStart}`}>
           <div className={`${slideSnapTo}`}>
             <p className="mx-auto text-2xl font-bold">
-              A variety of unique projects have been built to meet each client's
+              A variety of unique projects have been built to meet each client&apos;s
               business needs. Here are a few:
             </p>
           </div>
