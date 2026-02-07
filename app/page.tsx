@@ -8,7 +8,6 @@ const section = "h-screen mb-4 overflow-hidden";
 const sectionSnapStart = "snap-y snap-mandatory overflow-y-scroll h-screen";
 const sectionSnapTo = "snap-always snap-center duration-[2s]  ease-in";
 
-
 // page information
 const pages = ["About", "Skills", "Projects", "Contact"];
 const sectionTitle = "text-sky-400 text-3xl font-bold my-4 ";
@@ -16,7 +15,7 @@ const heroText = "text-left text-md";
 
 // skills table customization
 const tableImages = "place-items-center";
-const tableText = "text-center text-black text-xs";
+const tableText = "caption-bottom text-black text-xs";
 
 // project slideshow
 const slideSnapStart =
@@ -31,8 +30,8 @@ export default function Home() {
 
   useEffect(() => {
     const containerCurrent = containerRef.current;
-    if(!containerCurrent) return;
-    
+    if (!containerCurrent) return;
+
     const onScroll = () => {
       setVisible(containerCurrent.scrollTop > 100);
     };
@@ -43,10 +42,10 @@ export default function Home() {
 
   const scrollToTop = () => {
     containerRef.current?.scrollTo({
-      top: 0, behavior: "smooth",
+      top: 0,
+      behavior: "smooth",
     });
   };
-  
 
   return (
     <>
@@ -103,7 +102,9 @@ export default function Home() {
           <div className="sm:flex sm:justify-between">
             <div>
               <h5 className={`${heroText}`}>Hi, My name is</h5>
-              <h1 className={`${heroText} mb-2 font-bold text-5xl md:text-6xl `}>
+              <h1
+                className={`${heroText} mb-2 font-bold text-5xl md:text-6xl `}
+              >
                 Reginald Griffin II
               </h1>
               <h5 id="title" className={`${heroText}`}>
@@ -113,7 +114,9 @@ export default function Home() {
                 id="contactBtn"
                 className="relative my-2 overflow-hidden rounded-xl text-sky-400 font-bold px-6 "
               >
-                <Link href={`#${pages[3].toLowerCase()}`}>Let&apos;s Connect</Link>
+                <Link href={`#${pages[3].toLowerCase()}`}>
+                  Let&apos;s Connect
+                </Link>
               </button>
             </div>
 
@@ -126,7 +129,6 @@ export default function Home() {
                 style={{
                   borderRadius: "0px 0px 120px ",
                   objectFit: "contain",
-                  objectPosition: "10% 10%",
                 }}
                 alt="headshot image"
                 unoptimized
@@ -145,26 +147,27 @@ export default function Home() {
           <p className="mx-10 font-light text-sm text-pretty lg:text-lg">
             My name is Reginald Griffin II. I am an IT professional based in San
             Antonio with experience supporting enterprise users, systems, and
-            security focused environments. I began my IT career in 2021 as a Help
-            Desk Technician, where I supported end users, resolved technical
-            issues, and worked within structured operational processes. That
-            foundation exposed me to how systems operate at scale and how small
-            improvements reduce error and time.
+            security focused environments. I began my IT career in 2021 as a
+            Help Desk Technician, where I supported end users, resolved
+            technical issues, and worked within structured operational
+            processes. That foundation exposed me to how systems operate at
+            scale and how small improvements reduce error and time.
             <br />
             <br />
-            Through daily support work, I developed an interest in automation and
-            problem reduction. I began building tools and scripts to streamline
-            repetitive tasks using PowerShell, Bash, and Python. This work
-            expanded into software and web development, where I am self taught and
-            project driven. I have built command line tools, automated workflows,
-            and deployed web applications using HTML, CSS, and JavaScript.
+            Through daily support work, I developed an interest in automation
+            and problem reduction. I began building tools and scripts to
+            streamline repetitive tasks using PowerShell, Bash, and Python. This
+            work expanded into software and web development, where I am self
+            taught and project driven. I have built command line tools,
+            automated workflows, and deployed web applications using HTML, CSS,
+            and JavaScript.
             <br />
             <br />I continue to grow my skill set based on real world needs and
             industry demand. I am actively learning React and TypeScript while
-            developing and maintaining a freelance client website. My professional
-            focus centers on reliability, clear communication, continuous
-            learning, and building practical solutions that improve systems and
-            user experience.
+            developing and maintaining a freelance client website. My
+            professional focus centers on reliability, clear communication,
+            continuous learning, and building practical solutions that improve
+            systems and user experience.
           </p>
           {/* ================================ */}
         </div>
@@ -186,125 +189,129 @@ export default function Home() {
               <br />
             </p>
             <p>
-              I have provided services in multiple areas within the IT sector from
-              Hardware and Software to Networking and Security.
+              I have provided services in multiple areas within the IT sector
+              from Hardware and Software to Networking and Security.
               <br /> <br />
-              Here are some of the tools and resources that I have used over time.
+              Here are some of the tools and resources that I have used over
+              time.
             </p>
           </div>
 
-          <table className="mt-4 border-separate w-[90%] mx-auto">
+          <table className="mt-4 border-separate w-[80%] mx-auto">
             <tbody>
-              <tr className={`${tableText}`}>
+              <tr>
                 <td className={`${tableImages}`}>
-                <img
-                  width={60}
-                  height={50}
-                  src="https://img.icons8.com/ios/50/figma--v1.png"
-                  alt="figma--v1"
-                />
-                  Figma
+                  <img
+                    width={60}
+                    height={60}
+                    src="https://img.icons8.com/ios/50/figma--v1.png"
+                    alt="figma--v1"
+                  />
+                  <caption className={`${tableText}`} >Figma</caption>
                 </td>
                 <td className={`${tableImages}`}>
-                <img
-                  width={60}
-                  height={50}
-                  src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
-                  alt="visual-studio-code-2019--v2"
-                />
-                  Visual Studio
+                  <img
+                    width={60}
+                    height={60}
+                    src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
+                    alt="visual-studio-code-2019--v2"
+                  />
+                  <caption className={`${tableText}`} >Visual Studio</caption>
                 </td>
                 <td className={`${tableImages}`}>
-                <img
-                  width={60}
-                    height={50}
+                  <img
+                    width={60}
+                    height={60}
                     src="https://img.icons8.com/ios/50/git.png"
                     alt="git"
-                />
-                  Git
+                  />
+                  <caption className={`${tableText}`}>Git</caption>
                 </td>
                 <td className={`${tableImages}`}>
-                <img
-                  width={60}
-                  height={50}
-                  src="https://img.icons8.com/ios/50/html-5--v1.png"
-                  alt="html-5--v1"
-                />
-                  HTML5
+                  <img
+                    width={60}
+                    height={50}
+                    src="https://img.icons8.com/ios/50/html-5--v1.png"
+                    alt="html-5--v1"
+                  />
+                  <caption className={`${tableText}`}>HTML5</caption>
                 </td>
                 <td className={`${tableImages}`}>
-                <img
-                  width={70}
-                  height={60}
-                  src="https://img.icons8.com/ios/60/css3.png"
-                  alt="css3"
-                />
-                  CSS3
+                  <img
+                    width={70}
+                    height={60}
+                    src="https://img.icons8.com/ios/60/css3.png"
+                    alt="css3"
+                  />
+                  <caption className={`${tableText}`}>CSS3</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
-                <img
-                  width={70}
-                  height={60}
-                  src="https://img.icons8.com/ios/60/bootstrap.png"
-                  alt="bootstrap"
-                />
-                  Bootstrap5
+                  <img
+                    width={70}
+                    height={60}
+                    src="https://img.icons8.com/ios/60/bootstrap.png"
+                    alt="bootstrap"
+                  />
+                  <caption className={`${tableText}`}>Bootstrap5</caption>
                 </td>
               </tr>
-              <tr className={`${tableText}`}>
+              <tr>
                 <td className={`${tableImages}`}>
-                <img
-                  width={60}
-                  height={50}
-                  src="https://img.icons8.com/material-rounded/50/tailwind_css.png"
-                  alt="tailwind_css"
-                />
-                  Tailwind CSS
+                  <img
+                    width={60}
+                    height={50}
+                    src="https://img.icons8.com/material-rounded/50/tailwind_css.png"
+                    alt="tailwind_css"
+                  />
+                  <caption className={`${tableText}`}>Tailwind CSS</caption>
                 </td>
                 <td className={`${tableImages}`}>
-                <img
-                  width={70}
-                  height={60}
-                  src="https://img.icons8.com/ios/60/react-native--v1.png"
-                  alt="react-native--v1"
-                />
-                  React
+                  <img
+                    width={70}
+                    height={70}
+                    src="https://img.icons8.com/ios/60/react-native--v1.png"
+                    alt="react-native--v1"
+                  />
+                  <caption className={`${tableText}`}>React</caption>
                 </td>
                 <td className={`${tableImages}`}>
-                <img
-                  width={70}
-                  height={60}
-                  src="https://img.icons8.com/ios/60/typescript.png"
-                  alt="typescript"
-                />
-                  TypeScript
+                  <img
+                    width={50}
+                    height={50}
+                    src="https://img.icons8.com/ios/60/typescript.png"
+                    alt="typescript"
+                  />
+                  <caption className={`${tableText}`}>TypeScript</caption>
+                </td>
+
+                <td className={`${tableImages}`}>
+                  <img
+                    width={60}
+                    height={60}
+                    src="https://img.icons8.com/ios/50/python--v1.png"
+                    alt="python--v1"
+                  />
+                  <caption className={`${tableText}`}>Python</caption>
                 </td>
                 <td className={`${tableImages}`}>
-                <img
-                  width={70}
-                  height={60}
-                  src="https://img.icons8.com/ios/50/python--v1.png"
-                  alt="python--v1"
-                />
-                  Python
+                  <img
+                    width={50}
+                    height={50}
+                    src="https://img.icons8.com/ios/50/powershell.png"
+                    alt="powershell"
+                  />
+                  <caption className={`${tableText}`}>Powershell</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
-                <img
-                  width={70}
-                  height={60}
-                  src="https://img.icons8.com/ios/50/powershell.png"
-                  alt="powershell"
-                />
-                  Powershell
-                </td>
-                <td className={`${tableImages}`}>
-                <img
-                  width={60}
-                  height={50}
-                  src="https://img.icons8.com/ios/50/linux.png"
-                  alt="linux"
-                />
-                  Linux
+                  <img
+                    width={50}
+                    height={50}
+                    src="https://img.icons8.com/ios/50/linux.png"
+                    alt="linux"
+                  />
+                  <caption className={`${tableText}`}>Linux</caption>
                 </td>
               </tr>
             </tbody>
@@ -325,8 +332,8 @@ export default function Home() {
           <div id="horizontalScroll" className={`${slideSnapStart}`}>
             <div className={`${slideSnapTo} flex-col justify-center `}>
               <p className="mx-auto text-2xl font-bold mb-4">
-                A variety of unique projects have been built to meet each client&apos;s
-                business needs. Here are a few:
+                A variety of unique projects have been built to meet each
+                client&apos;s business needs. Here are a few:
               </p>
               <img
                 width={50}
@@ -387,9 +394,9 @@ export default function Home() {
           {/* contact section */}
           <h5 className={`${sectionTitle}`}>{pages[3]}</h5>
           <p className="h-[25%] flex items-center my-10 text-2xl italic ">
-            I focus on building dependable solutions and fixing problems fast. You
-            get clean work, clear updates, and strong follow through. View my
-            projects. Reach out to start a conversation.
+            I focus on building dependable solutions and fixing problems fast.
+            You get clean work, clear updates, and strong follow through. View
+            my projects. Reach out to start a conversation.
           </p>
           <h5 className="mt-3 font-bold text-2xl hover:text-[#FF4303] hover:underline transition">
             r.griffin2680@gmail.com
@@ -401,14 +408,15 @@ export default function Home() {
       </main>
       {visible && (
         <button
-        onClick={scrollToTop}
-        className="fixed bottom-6 right-6 z-50 rounded-full px-4 py-2 text-white">
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 rounded-full px-4 py-2 text-white"
+        >
           <img
-              width={50}
-              height={50}
-              src="https://img.icons8.com/ios/50/circled-chevron-up.png"
-              alt="circled-chevron-up"
-            />
+            width={50}
+            height={50}
+            src="https://img.icons8.com/ios/50/circled-chevron-up.png"
+            alt="circled-chevron-up"
+          />
         </button>
       )}
     </>
