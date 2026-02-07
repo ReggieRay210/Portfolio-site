@@ -13,34 +13,6 @@ const metadata: Metadata = {
   description: "Portfolio page",
 };
 
-function ScrollToTop() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setVisible(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  if (!visible) return null;
-
-  return (
-    <button
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed z-50"
-    >
-      <img
-        width="50"
-        height="50"
-        src="https://img.icons8.com/ios/50/circled-chevron-up.png"
-        alt="circled-chevron-up"
-      />
-    </button>
-  );
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -57,7 +29,6 @@ export default function RootLayout({
         }`}
       >
         {children}
-        <ScrollToTop />
       </body>
     </html>
   );
