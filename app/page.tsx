@@ -207,8 +207,9 @@ export default function Home() {
                     src="https://img.icons8.com/ios/50/figma--v1.png"
                     alt="figma--v1"
                   />
-                  <caption className={`${tableText}`} >Figma</caption>
+                  <caption className={`${tableText}`}>Figma</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={60}
@@ -216,8 +217,9 @@ export default function Home() {
                     src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
                     alt="visual-studio-code-2019--v2"
                   />
-                  <caption className={`${tableText}`} >Visual Studio</caption>
+                  <caption className={`${tableText}`}>Visual Studio</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={60}
@@ -227,6 +229,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>Git</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={60}
@@ -236,6 +239,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>HTML5</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={70}
@@ -256,6 +260,7 @@ export default function Home() {
                   <caption className={`${tableText}`}>Bootstrap5</caption>
                 </td>
               </tr>
+
               <tr>
                 <td className={`${tableImages}`}>
                   <img
@@ -266,6 +271,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>Tailwind CSS</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={70}
@@ -275,6 +281,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>React</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={50}
@@ -294,6 +301,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>Python</caption>
                 </td>
+                
                 <td className={`${tableImages}`}>
                   <img
                     width={50}
