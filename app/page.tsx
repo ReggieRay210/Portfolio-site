@@ -22,7 +22,7 @@ const tableText = "text-center text-black text-xs";
 const slideSnapStart =
   "snap-x flex snap-mandatory h-[90%] w-[100%] mx-auto overflow-scroll";
 const slideSnapTo =
-  "sm:p-10 snap-center flex-shrink-0 h-[100%] w-[100%] flex items-center justify-between text-center";
+  "snap-center flex-shrink-0 h-[100%] w-[100%] flex items-center text-center sm:p-10";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -323,11 +323,17 @@ export default function Home() {
 
           {/* Horizontal scroll container */}
           <div id="horizontalScroll" className={`${slideSnapStart}`}>
-            <div className={`${slideSnapTo}`}>
-              <p className="mx-auto text-2xl font-bold">
+            <div className={`${slideSnapTo} flex-col justify-center `}>
+              <p className="mx-auto text-2xl font-bold mb-4">
                 A variety of unique projects have been built to meet each client&apos;s
                 business needs. Here are a few:
               </p>
+              <img
+                width={50}
+                height={50}
+                src="https://img.icons8.com/ios/50/right--v1.png"
+                alt="right--v1"
+              />
             </div>
             <div className={`${slideSnapTo}`}>
               <div>
