@@ -19,13 +19,14 @@ const tableText = "caption-bottom text-black text-xs";
 
 // project slideshow
 const slideSnapStart =
-  "snap-x flex snap-mandatory h-[90%] w-[100%] mx-auto overflow-scroll";
+  "snap-x flex snap-mandatory h-auto w-[100%] mx-auto overflow-scroll";
 const slideSnapTo =
   "snap-center flex-shrink-0 h-[100%] w-[100%] flex items-center text-center sm:p-10";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const horizontalRef = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -38,6 +39,32 @@ export default function Home() {
 
     containerCurrent.addEventListener("scroll", onScroll);
     return () => containerCurrent.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const horizontalCurrent = horizontalRef.current;
+    if (!horizontalCurrent) return;
+
+    const onWheel = (mouse: WheelEvent) => {
+      const maxScroll =
+        horizontalCurrent.scrollWidth - horizontalCurrent.clientWidth;
+
+      if (
+        (mouse.deltaY < 0 && horizontalCurrent.scrollLeft <= 0) ||
+        (mouse.deltaY > 0 && horizontalCurrent.scrollLeft >= maxScroll)
+      ) {
+        return;
+      }
+
+      mouse.preventDefault();
+
+      horizontalCurrent.scrollLeft += mouse.deltaY * 25;
+    };
+
+    horizontalCurrent.addEventListener("wheel", onWheel, { passive: false });
+    return () => {
+      horizontalCurrent.removeEventListener("wheel", onWheel);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -207,8 +234,9 @@ export default function Home() {
                     src="https://img.icons8.com/ios/50/figma--v1.png"
                     alt="figma--v1"
                   />
-                  <caption className={`${tableText}`} >Figma</caption>
+                  <caption className={`${tableText}`}>Figma</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={60}
@@ -216,8 +244,9 @@ export default function Home() {
                     src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
                     alt="visual-studio-code-2019--v2"
                   />
-                  <caption className={`${tableText}`} >Visual Studio</caption>
+                  <caption className={`${tableText}`}>Visual Studio</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={60}
@@ -227,6 +256,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>Git</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={60}
@@ -236,6 +266,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>HTML5</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={70}
@@ -256,6 +287,7 @@ export default function Home() {
                   <caption className={`${tableText}`}>Bootstrap5</caption>
                 </td>
               </tr>
+
               <tr>
                 <td className={`${tableImages}`}>
                   <img
@@ -266,6 +298,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>Tailwind CSS</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={70}
@@ -275,6 +308,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>React</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={50}
@@ -294,6 +328,7 @@ export default function Home() {
                   />
                   <caption className={`${tableText}`}>Python</caption>
                 </td>
+
                 <td className={`${tableImages}`}>
                   <img
                     width={50}
@@ -322,18 +357,24 @@ export default function Home() {
         {/* ****************************************** */}
 
         {/* group4 */}
-        <div className={`${section} ${sectionSnapTo}`}>
+        <div id="projects-section" className={`${section} ${sectionSnapTo}`}>
           {/* projects section */}
           <h5 id="projects" className={`${sectionTitle}`}>
             {pages[2]}
           </h5>
 
           {/* Horizontal scroll container */}
-          <div id="horizontalScroll" className={`${slideSnapStart}`}>
+          <div
+            id="horizontalScroll"
+            ref={horizontalRef}
+            className={`${slideSnapStart}`}
+          >
             <div className={`${slideSnapTo} flex-col justify-center `}>
               <p className="mx-auto text-2xl font-bold mb-4">
                 A variety of unique projects have been built to meet each
-                client&apos;s business needs. Here are a few:
+                client&apos;s business needs.
+                <br />
+                <br /> Here are a few:
               </p>
               <img
                 width={50}
@@ -342,7 +383,7 @@ export default function Home() {
                 alt="right--v1"
               />
             </div>
-            <div className={`${slideSnapTo}`}>
+            <div className={`${slideSnapTo} justify-between`}>
               <div>
                 <h5 className="text-md font-thin text-gray-200">
                   Portfolio website
@@ -364,12 +405,14 @@ export default function Home() {
                 unoptimized
               />
             </div>
-            <div className={`${slideSnapTo}`}>
+            <div className={`${slideSnapTo} justify-between`}>
               <div>
                 <h5 className="text-md font-thin text-gray-200">
                   Portfolio website
                 </h5>
-                <h5 className="text-[2rem]">Radiant Designs Hair Salon</h5>
+                <h5 className="text-[2rem] md:text-[3rem]">
+                  Radiant Designs Hair Salon
+                </h5>
                 <h5>
                   <span className="text-[#FF4303] font-bold">Built with</span>:
                   HTML, Bootstrap 5, JavaScript
