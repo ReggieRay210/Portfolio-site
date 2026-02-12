@@ -15,7 +15,7 @@ const heroText = "text-left text-md";
 
 // skills table customization
 const tableImages = "place-items-center";
-const tableText = "caption-bottom text-black text-xs";
+const tableText = "figcaption-bottom text-black text-xs";
 
 // project slideshow
 const slideSnapStart =
@@ -234,7 +234,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/50/figma--v1.png"
                     alt="figma--v1"
                   />
-                  <caption className={`${tableText}`}>Figma</caption>
+                  <figcaption className={`${tableText}`}>Figma</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -244,7 +244,7 @@ export default function Home() {
                     src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
                     alt="visual-studio-code-2019--v2"
                   />
-                  <caption className={`${tableText}`}>Visual Studio</caption>
+                  <figcaption className={`${tableText}`}>Visual Studio</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -254,7 +254,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/50/git.png"
                     alt="git"
                   />
-                  <caption className={`${tableText}`}>Git</caption>
+                  <figcaption className={`${tableText}`}>Git</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -264,7 +264,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/50/html-5--v1.png"
                     alt="html-5--v1"
                   />
-                  <caption className={`${tableText}`}>HTML5</caption>
+                  <figcaption className={`${tableText}`}>HTML5</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -274,7 +274,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/60/css3.png"
                     alt="css3"
                   />
-                  <caption className={`${tableText}`}>CSS3</caption>
+                  <figcaption className={`${tableText}`}>CSS3</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -284,7 +284,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/60/bootstrap.png"
                     alt="bootstrap"
                   />
-                  <caption className={`${tableText}`}>Bootstrap5</caption>
+                  <figcaption className={`${tableText}`}>Bootstrap5</figcaption>
                 </td>
               </tr>
 
@@ -296,7 +296,7 @@ export default function Home() {
                     src="https://img.icons8.com/material-rounded/50/tailwind_css.png"
                     alt="tailwind_css"
                   />
-                  <caption className={`${tableText}`}>Tailwind CSS</caption>
+                  <figcaption className={`${tableText}`}>Tailwind CSS</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -306,7 +306,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/60/react-native--v1.png"
                     alt="react-native--v1"
                   />
-                  <caption className={`${tableText}`}>React</caption>
+                  <figcaption className={`${tableText}`}>React</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -316,7 +316,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/60/typescript.png"
                     alt="typescript"
                   />
-                  <caption className={`${tableText}`}>TypeScript</caption>
+                  <figcaption className={`${tableText}`}>TypeScript</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -326,7 +326,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/50/python--v1.png"
                     alt="python--v1"
                   />
-                  <caption className={`${tableText}`}>Python</caption>
+                  <figcaption className={`${tableText}`}>Python</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -336,7 +336,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/50/powershell.png"
                     alt="powershell"
                   />
-                  <caption className={`${tableText}`}>Powershell</caption>
+                  <figcaption className={`${tableText}`}>Powershell</figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -346,7 +346,7 @@ export default function Home() {
                     src="https://img.icons8.com/ios/50/linux.png"
                     alt="linux"
                   />
-                  <caption className={`${tableText}`}>Linux</caption>
+                  <figcaption className={`${tableText}`}>Linux</figcaption>
                 </td>
               </tr>
             </tbody>
@@ -367,7 +367,8 @@ export default function Home() {
           <div
             id="horizontalScroll"
             ref={horizontalRef}
-            className={`${slideSnapStart}`}
+            className={`${slideSnapStart} flex items-center`}
+            style={{minHeight: "70vh"}}
           >
             <div className={`${slideSnapTo} flex-col justify-center `}>
               <p className="mx-auto text-2xl font-bold mb-4">
