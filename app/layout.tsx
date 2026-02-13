@@ -9,6 +9,9 @@ const layoutColor =
 export const metadata: Metadata = {
   title: "Reginald Griffin II | Portfolio Page",
   description: "Portfolio page",
+  icons:{
+    icon: "/favicon-32x32.png"
+  }
 };
 
 export default function RootLayout({
@@ -18,9 +21,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" type="image/x-icon" href="public/favicon-32x32.png" />
-      </head>
       <body
         className={`scroll-smooth text-white text-center mx-2 ${layoutColor}${
           inter.className

@@ -16,7 +16,6 @@
   }
 }
 
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -32,36 +31,36 @@ body {
 }
 
 /* HeroSection customization */
-#title{
-  width:25em;
+#title {
+  width: 25em;
 }
 #titleName::before {
-  content: 'Web Designer';
+  content: "Web Designer";
   padding-right: 4px;
   color: #ff4303;
   font-weight: bolder;
   animation: title-change 10s infinite;
 }
 
-@keyframes title-change{
+@keyframes title-change {
   0%,
   25% {
-    content: 'Front-end Developer';
+    content: "Front-end Developer";
   }
   26%,
   50% {
-    content: 'IT Support Technician';
+    content: "IT Support Technician";
   }
   51%,
   75% {
-    content: 'CyberSecurity Analyst';
+    content: "CyberSecurity Analyst";
   }
 }
 
 /* button animation */
 #contactBtn::before {
-  content: '';
-  background: linear-gradient(to bottom, #51a2ed , #FF4303);
+  content: "";
+  background: linear-gradient(to bottom, #51a2ed, #ff4303);
   position: absolute;
   width: 120%;
   height: 90%;
@@ -79,14 +78,15 @@ body {
   }
 }
 
-#contactBtn::after{
-  content: '';
+#contactBtn::after {
+  content: "";
   inset: 2.5px;
   position: absolute;
   background: #785aa2;
   border-radius: 15px;
   z-index: -1;
 }
+
 /* =============================== */
 
 /* projects section */

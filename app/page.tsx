@@ -16,6 +16,21 @@ const heroText = "text-left text-md";
 // skills table customization
 const tableImages = "place-items-center";
 const tableText = "figcaption-bottom text-black text-xs";
+type Partner = {
+  name: string;
+  logo: string;
+};
+
+const partners: Partner[] = [
+  { name: "Alorica", logo: "/Alorica.png" },
+  { name: "APEX Systems", logo: "/APEX.png" },
+  { name: "Cigna Healthcare", logo: "/Cigna.png" },
+  { name: "Dell Technologies", logo: "/Dell.png" },
+  { name: "New York Life", logo: "/NYL.png" },
+  { name: "ECA Staffing", logo: "/ECA-Staffing.png" },
+  { name: "Randstad", logo: "/Randstad.png" },
+  { name: "Fidelity National Financial", logo: "/Fidelity-National.png" },
+];
 
 // project slideshow
 const slideSnapStart =
@@ -147,9 +162,12 @@ export default function Home() {
               </button>
             </div>
 
-            <div>
+            <div
+              className="max-w-max mx-auto sm:mx-0 [mask-image:linear-gradient(to_right,black_80%,transparent_100%)]
+[-webkit-mask-image:linear-gradient(to_right,black_80%,transparent_100%)]"
+            >
               <Image
-                className="mx-auto"
+                id="headshot-image"
                 src="/headshot.png"
                 width={320}
                 height={100}
@@ -244,7 +262,9 @@ export default function Home() {
                     src="https://img.icons8.com/wired/64/visual-studio-code-2019--v2.png"
                     alt="visual-studio-code-2019--v2"
                   />
-                  <figcaption className={`${tableText}`}>Visual Studio</figcaption>
+                  <figcaption className={`${tableText}`}>
+                    Visual Studio
+                  </figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -296,7 +316,9 @@ export default function Home() {
                     src="https://img.icons8.com/material-rounded/50/tailwind_css.png"
                     alt="tailwind_css"
                   />
-                  <figcaption className={`${tableText}`}>Tailwind CSS</figcaption>
+                  <figcaption className={`${tableText}`}>
+                    Tailwind CSS
+                  </figcaption>
                 </td>
 
                 <td className={`${tableImages}`}>
@@ -351,6 +373,51 @@ export default function Home() {
               </tr>
             </tbody>
           </table>
+          <div className="mt-4">
+            <h2 className="text-sky-300 font-semibold text-xl text-center mb-2 tracking-wide uppercase">
+              {" "}
+              Companies Worked With{" "}
+            </h2>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+              <div className=" bg-white/5 py-2 rounded-xl overflow-hidden relative gap-10 items-center justify-items-center">
+                <div className="relative overflow-hidden">
+                  <div className="flex whitespace-nowrap animate-scroll hover:[animation-play-state:paused]">
+                    {partners.map((partner, index) => (
+                      <div
+                        key={partner.name + "dup" + index}
+                        className="flex items-center justify-center h-14 w-[160px] flex-shrink-0 opacity-60 hover:opacity-100 hover:scale-105 transition duration-300 ease-in-out"
+                      >
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          width={120}
+                          height={60}
+                          className="object-contain max-h-14 w-auto grayscale hover:grayscale-0 transition duration-300"
+                          unoptimized
+                        />
+                      </div>
+                    ))}
+                    {partners.map((partner, index) => (
+                      <div
+                        key={partner.name + "dup" + index}
+                        className="flex items-center justify-center h-14 w-[160px] flex-shrink-0 opacity-60 hover:opacity-100 hover:scale-105 transition duration-300 ease-in-out"
+                      >
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          width={120}
+                          height={60}
+                          className="object-contain max-h-14 w-auto grayscale hover:grayscale-0 transition duration-300"
+                          unoptimized
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* ================================ */}
         </div>
 
@@ -368,7 +435,7 @@ export default function Home() {
             id="horizontalScroll"
             ref={horizontalRef}
             className={`${slideSnapStart} flex items-center`}
-            style={{minHeight: "70vh"}}
+            style={{ minHeight: "70vh" }}
           >
             <div className={`${slideSnapTo} flex-col justify-center `}>
               <p className="mx-auto text-2xl font-bold mb-4">
