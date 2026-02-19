@@ -1,4 +1,4 @@
-# Reginald Griffin Portfolio
+# Reginald Griffin II Portfolio
 
 Live Site  
 https://built-by-reginald.vercel.app/
