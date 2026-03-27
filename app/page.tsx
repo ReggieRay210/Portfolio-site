@@ -452,6 +452,7 @@ export default function Home() {
               />
             </div>
             <div className={`${slideSnapTo} justify-between`}>
+              <a href="#"></a>
               <div>
                 <h5 className="text-md font-thin text-gray-200">
                   Portfolio website
@@ -478,12 +479,14 @@ export default function Home() {
                 <h5 className="text-md font-thin text-gray-200">
                   Portfolio website
                 </h5>
-                <h5 className="text-[2rem] md:text-[3rem]">
-                  Radiant Designs Hair Salon
-                </h5>
+                <a href="https://radiantdesigns.netlify.app/" target="_blank">
+                  <h5 className="text-[2rem] md:text-[3rem]">
+                    Radiant Designs Hair Salon
+                  </h5>
+                </a>
                 <h5>
-                  <span className="text-[#FF4303] font-bold">Built with</span>:
-                  HTML, Bootstrap 5, JavaScript
+                  <span className="text-[#FF4303] font-bold">Built with</span>
+                  : HTML, Bootstrap 5, JavaScript
                 </h5>
               </div>
               <Image

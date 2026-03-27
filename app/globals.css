@@ -39,7 +39,7 @@ body {
   padding-right: 4px;
   color: #ff4303;
   font-weight: bolder;
-  animation: title-change 10s infinite;
+  animation: title-change 5s infinite;
 }
 
 @keyframes title-change {
